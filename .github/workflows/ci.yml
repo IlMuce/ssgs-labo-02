@@ -1,0 +1,39 @@
+name: CI
+
+# Trigger sia su push che su pull request verso main
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout del codice
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Setup Node.js con cache npm
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      # 3. Installa le dipendenze
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Esegui i test con coverage
+      - name: Run tests with coverage
+        run: npm test
+
+      # 5. Carica il report di coverage come artifact
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/lcov.info

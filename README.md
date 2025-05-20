@@ -39,5 +39,13 @@ node index.js <numero_funzione> <stringa_input> [parametro_aggiuntivo]
   3: Tronca Stringa (truncateString) - richiede [lunghezza_massima]
   4: Conta Caratteri (countCharacters)
 
-# Esecuzione test con Jest e generazione report di coverage
+## Esecuzione test con Jest e generazione report di coverage
 npm test             # Esegue jest con --coverage (coverage integrato)
+
+## Pipeline CI  
+Questo progetto include un workflow GitHub Actions (`.github/workflows/ci.yml`) che:  
+1) Recupera il codice dal repository
+2) Prepara Node.js (versione 20)
+3) Installa le dipendenze con 'npm ci' (usa package-lock.json)
+4) Esegue tutti i test (npm test) e misura la copertura del codice
+5) Carica il report di coverage (coverage/lcov.info) come artefatto scaricabile
