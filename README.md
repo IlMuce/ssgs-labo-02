@@ -22,7 +22,9 @@ cd ssgs-labo-02
 npm ci
 ```
 ## Avvio
+```bash
 node index.js <numero_funzione> <stringa_input> [parametro_aggiuntivo]
+```
 - Dove "Numero funzione" equivale a:
   
   1: Inverti Stringa (reverseString)
@@ -34,7 +36,9 @@ node index.js <numero_funzione> <stringa_input> [parametro_aggiuntivo]
   4: Conta Caratteri (countCharacters)
 
 ## Esecuzione test con Jest e generazione report di coverage
-- npm test
+```bash
+npm test
+```
   
 Esegue tutti i test implementati con jest (e coverage integrata) per tutte le funzioni in `stringUtils.js`:
   - `reverseString` (caso normale e stringa vuota)
