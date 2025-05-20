@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 
 # Environments
-.env
+.env*
 .venv
 env/
 venv/
@@ -17,3 +17,28 @@ dist/
 .coverage
 .pytest_cache/
 htmlcov/
+*.lcov
+
+# Dipendenze
+node_modules/
+
+# Coverage
+coverage/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Cache
+.npm/
+.cache/
+.eslintcache
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

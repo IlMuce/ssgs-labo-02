@@ -21,10 +21,20 @@ Buona analisi e buon lavoro!
 * Troncamento di una stringa a una lunghezza massima specificata.
 * Conteggio delle occorrenze di ciascun carattere in una stringa.
 
-## Installazione e Avvio
+## Prerequisiti  
+- Node.js v20 o superiore
+- npm (incluso con Node.js)
 
-*(Questa sezione dovrà essere completata dallo studente come parte dell'Esercizio 1, includendo i comandi per installare le dipendenze ed eseguire l'applicazione e i test).*
-
----
-
-*Suggerimento: Presta particolare attenzione ai requisiti dell'Esercizio 1 del laboratorio per completare e correggere questo README e gli altri file di configurazione.*
+## Installazione
+```bash
+git clone https://github.com/IlMuce/ssgs-labo-02.git
+cd ssgs-labo-02
+npm ci
+```
+## Avvio
+node index.js <numero_funzione> <stringa_input> [parametro_aggiuntivo]
+- Numero funzione:
+  1: Inverti Stringa (reverseString)
+  2: Controlla Palindromo (isPalindrome)
+  3: Tronca Stringa (truncateString) - richiede [lunghezza_massima]
+  4: Conta Caratteri (countCharacters)

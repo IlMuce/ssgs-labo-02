@@ -1,12 +1,49 @@
 {
   "name": "labo-string",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "CLI Node.js per manipolazione di stringhe",
+  "main": "src/stringUtils.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/stringUtils.js",
+    "test": "jest --coverage"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IlMuce/ssgs-labo-02.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IlMuce/ssgs-labo-02/issues"
+  },
+  "homepage": "https://github.com/IlMuce/ssgs-labo-02#readme",
+  "author": "IlMuce",
+  "license": "ISC",
+  "keywords": ["cli","string","nodejs","jest"],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "src/stringUtils.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "coverageReporters": [
+      "text",
+      "lcov"
+    ]
+  }
 }
+
