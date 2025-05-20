@@ -38,3 +38,6 @@ node index.js <numero_funzione> <stringa_input> [parametro_aggiuntivo]
   2: Controlla Palindromo (isPalindrome)
   3: Tronca Stringa (truncateString) - richiede [lunghezza_massima]
   4: Conta Caratteri (countCharacters)
+
+# Esecuzione test con Jest e generazione report di coverage
+npm test             # Esegue jest con --coverage (coverage integrato)
